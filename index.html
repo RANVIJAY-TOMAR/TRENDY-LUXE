@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Luxe - Premium Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <h1>🛍 Trendy Luxe</h1>
+        <ul>
+            <li><a href="#electronics">Electronics</a></li>
+            <li><a href="#clothing">Clothing</a></li>
+            <li><a href="#footwear">Footwear</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+            <li><a href="#interiors">Interiors</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <header>
+        <h2>Luxury Shopping, Elevated</h2>
+        <p>Indulge in high-end brands and effortless doorstep delivery.</p>
+    </header>
+
+    <section id="electronics">
+        <h2>Electronics</h2>
+        <div class="product-section">
+            <div class="product-card">
+                <img src="apple.jpg?laptop,luxury" alt="Laptop">
+                <h3>Premium Laptop</h3>
+                <p>$2,499.99</p>
+                <button onclick="addToCart('Premium Laptop', 2499.99)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="smartphone.jpg?smartphone,luxury" alt="Smartphone">
+                <h3>Luxury Smartphone</h3>
+                <p>$1,299.99</p>
+                <button onclick="addToCart('Luxury Smartphone', 1299.99)">Add to Cart</button>
+
+        
+            </div>
+        </div>
+    </section>
+<section id="clothing">
+    <h2>Clothing</h2>
+    <div class="product-section">
+        <div class="product-card">
+            <img src="suit.jpg?fashion,suit" alt="Suit">
+            <h3>Designer Suit</h3>
+            <p>$999.99</p>
+            <button onclick="addToCart('Designer Suit', 999.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="dress.jpeg?luxury,dress" alt="Dress">
+            <h3>Luxury Dress</h3>
+            <p>$1,499.99</p>
+            <button onclick="addToCart('Luxury Dress', 1499.99)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section id="footwear">
+    <h2>Footwear</h2>
+    <div class="product-section">
+        <div class="product-card">
+            <img src="shoes.jpeg?shoes,luxury" alt="Shoes">
+            <h3>Designer Shoes</h3>
+            <p>$799.99</p>
+            <button onclick="addToCart('Designer Shoes', 799.99)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+<section id="interiors">
+    <h2>interiors</h2>
+    <div class="product-section">
+        <div class="product-card">
+            <img src="sofa.jpeg?designer,sofa" alt="Suit">
+            <h3>Designer Sofa</h3>
+            <p>$1099.99</p>
+            <button onclick="addToCart('Designer sofa', 999.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="chan.jpg?luminious,chandelier" alt="Dress">
+            <h3>chandelier</h3>
+            <p>$3,499.99</p>
+            <button onclick="addToCart('chandelier', 1499.99)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+<!-- Cart Button (To Open Cart) -->
+<button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+
+<!-- Cart Modal -->
+<div id="cart-modal">
+    <div id="cart-content">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <h3>Total: $<span id="cart-total">0.00</span></h3>
+        <button id="checkout-btn">Checkout</button>
+        <button id="close-cart">Close</button>
+    </div>
+</div>
+
+    <script src="cart.js"></script>
+    
+
+</body>
+</html>
